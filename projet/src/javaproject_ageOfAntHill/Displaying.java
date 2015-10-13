@@ -95,11 +95,7 @@ public class Displaying implements Runnable, ActionListener {
 		// creation of the MenuBar
 		initMenuBar();
 
-		this.gridOfTheGame.setBounds(0, 0, DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
-		GridLayout gl = new GridLayout(Map.NBLINE, Map.NBCOLUMN);
-		this.gridOfTheGame.setLayout(gl);
-
-		this.window.addGameGrid(this.gridOfTheGame);
+		initGrid();
 
 		// add on the JPanel ressourcesOfThePlayer the JPanel jpanelLeft
 		ressourcesOfThePlayer.add(this.jpanelLeft);
@@ -135,6 +131,14 @@ public class Displaying implements Runnable, ActionListener {
 		this.window.setContentPane(this.splitWindow);
 		this.window.setVisible(false);
 
+	}
+
+	private void initGrid() {
+		this.gridOfTheGame.setBounds(0, 0, DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
+		GridLayout gl = new GridLayout(Map.NBLINE, Map.NBCOLUMN);
+		this.gridOfTheGame.setLayout(gl);
+
+		this.window.addGameGrid(this.gridOfTheGame);
 	}
 
 	private void initMenuBar() {
