@@ -85,21 +85,12 @@ public class Displaying implements Runnable, ActionListener {
 	 * The main frame of the game, contain the size and a bunch of parameters.
 	 */
 	private void initGraphInt() {
-		this.window.setTitle("Age Of AntHill **ALPHA INDEV 0.0000001**");
 
 		/**
 		 * This is the minimum and maximum width and height of the window.
 		 * 
 		 **/
-		this.window.setSize(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
-		this.window.setMinimumSize(new Dimension(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT));
-		this.window.setMaximumSize(new Dimension(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT));
-
-		this.window.setLocationRelativeTo(null);
-		this.window.setAlwaysOnTop(true);
-		this.window.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-
-		this.window.setResizable(false);
+		initWindow();
 
 		// creation of the MenuBar
 		JMenu menu = new JMenu("Menu");
@@ -173,6 +164,19 @@ public class Displaying implements Runnable, ActionListener {
 		this.window.setContentPane(this.splitWindow);
 		this.window.setVisible(false);
 
+	}
+
+	private void initWindow() {
+		this.window.setTitle("Age Of AntHill **ALPHA INDEV 0.0000001**");
+		this.window.setSize(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
+		this.window.setMinimumSize(new Dimension(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT));
+		this.window.setMaximumSize(new Dimension(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT));
+
+		this.window.setLocationRelativeTo(null);
+		this.window.setAlwaysOnTop(true);
+		this.window.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+		this.window.setResizable(false);
 	}
 	
 	/**
