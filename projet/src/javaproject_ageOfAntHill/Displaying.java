@@ -93,36 +93,7 @@ public class Displaying implements Runnable, ActionListener {
 		initWindow();
 
 		// creation of the MenuBar
-		JMenu menu = new JMenu("Menu");
-		this.itemAbout = new JMenuItem("About");
-		this.itemClose = new JMenuItem("Close");
-
-		menu.add(this.itemAbout);
-		menu.add(this.itemClose);
-
-		// add action listener
-		this.itemAbout.addActionListener(this);
-		this.itemClose.addActionListener(this);
-		this.menuBar.add(menu);
-
-		// creation of the game Menu
-		JMenu game = new JMenu("Game");
-		this.itemNewGame = new JMenuItem("New game");
-		this.itemSaveGame = new JMenuItem("Save game");
-		this.itemLoadGame = new JMenuItem("load a game");
-
-		// add item on the bar menu
-		game.add(this.itemNewGame);
-		game.add(this.itemSaveGame);
-		game.add(this.itemLoadGame);
-
-		// add action listener on the items
-		this.itemNewGame.addActionListener(this);
-		this.itemSaveGame.addActionListener(this);
-		this.itemLoadGame.addActionListener(this);
-
-		// add a menu option
-		this.menuBar.add(game);
+		initMenuBar();
 
 		this.gridOfTheGame.setBounds(0, 0, DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
 		GridLayout gl = new GridLayout(Map.NBLINE, Map.NBCOLUMN);
@@ -164,6 +135,39 @@ public class Displaying implements Runnable, ActionListener {
 		this.window.setContentPane(this.splitWindow);
 		this.window.setVisible(false);
 
+	}
+
+	private void initMenuBar() {
+		JMenu menu = new JMenu("Menu");
+		this.itemAbout = new JMenuItem("About");
+		this.itemClose = new JMenuItem("Close");
+
+		menu.add(this.itemAbout);
+		menu.add(this.itemClose);
+
+		// add action listener
+		this.itemAbout.addActionListener(this);
+		this.itemClose.addActionListener(this);
+		this.menuBar.add(menu);
+
+		// creation of the game Menu
+		JMenu game = new JMenu("Game");
+		this.itemNewGame = new JMenuItem("New game");
+		this.itemSaveGame = new JMenuItem("Save game");
+		this.itemLoadGame = new JMenuItem("load a game");
+
+		// add item on the bar menu
+		game.add(this.itemNewGame);
+		game.add(this.itemSaveGame);
+		game.add(this.itemLoadGame);
+
+		// add action listener on the items
+		this.itemNewGame.addActionListener(this);
+		this.itemSaveGame.addActionListener(this);
+		this.itemLoadGame.addActionListener(this);
+
+		// add a menu option
+		this.menuBar.add(game);
 	}
 
 	private void initWindow() {
