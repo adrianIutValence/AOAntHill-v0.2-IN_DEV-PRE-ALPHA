@@ -12,18 +12,8 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class Window extends JFrame {
 	
-	
-	/**
-	 * used to place units images (they're stored inside this grid of the game)
-	 */
 	private LabelCustom[][] tab;
-	/**
-	 * main interface of the game (events, etc...)
-	 */
 	private InterfaceHM interfHM;
-	/**
-	 * displaying this window
-	 */
 	private Displaying disp;
 	
 	/**

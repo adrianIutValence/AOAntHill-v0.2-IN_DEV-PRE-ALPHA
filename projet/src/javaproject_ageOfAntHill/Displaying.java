@@ -26,28 +26,13 @@ import java.awt.BorderLayout;
  * @version 20150607
  */
 public class Displaying implements Runnable, ActionListener {
-	SaveManager saveManager;
-	/**
-	 * represents the 'current' game
-	 * its value is null if there is no current game
-	 */
+	private SaveManager saveManager;
 	private Game game;
-	/**
-	 * Default value of the window's width.
-	 */
+	
 	private final static int DEFAULT_WINDOW_WIDTH = 980;
-	/**
-	 * Default value of the window's height.
-	 */
 	private final static int DEFAULT_WINDOW_HEIGHT = 980;
-	/**
-	 * Window of the game.
-	 */
+	
 	private Window window;
-
-	/**
-	 * Items in the JMenu bar.
-	 */
 	private JMenuItem itemAbout;
 	private JMenuItem itemClose;
 	private JMenuItem itemNewGame;
@@ -58,21 +43,9 @@ public class Displaying implements Runnable, ActionListener {
 	 * Grid of the game.
 	 */
 	private JPanel gridOfTheGame;
-	/**
-	 * Panel that displays informations on the selected units.
-	 */
 	private JPanel ressourcesOfThePlayer;
-	/**
-	 * Part of the window with the game and the menu bar.
-	 */
 	private JSplitPane splitGame;
-	/**
-	 * Part of the window with the ressources of the player.
-	 */
 	private JSplitPane splitRessources;
-	/**
-	 * Menu bar of the window.
-	 */
 	private JMenuBar menuBar;
 
 	/**
@@ -81,9 +54,7 @@ public class Displaying implements Runnable, ActionListener {
 	private JPanelLeft jpanelLeft;
 	private JSplitPane splitWindow;
 	private JPanel banner;
-	/**
-	 * interface etc...
-	 */
+
 	private InterfaceHM interfHM;
 
 	public Displaying(InterfaceHM interfHM) {
@@ -120,12 +91,9 @@ public class Displaying implements Runnable, ActionListener {
 		 * This is the minimum and maximum width and height of the window.
 		 * 
 		 **/
-
 		this.window.setSize(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
-		this.window.setMinimumSize(new Dimension(DEFAULT_WINDOW_WIDTH,
-				DEFAULT_WINDOW_HEIGHT));
-		this.window.setMaximumSize(new Dimension(DEFAULT_WINDOW_WIDTH,
-				DEFAULT_WINDOW_HEIGHT));
+		this.window.setMinimumSize(new Dimension(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT));
+		this.window.setMaximumSize(new Dimension(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT));
 
 		this.window.setLocationRelativeTo(null);
 		this.window.setAlwaysOnTop(true);
@@ -165,8 +133,7 @@ public class Displaying implements Runnable, ActionListener {
 		// add a menu option
 		this.menuBar.add(game);
 
-		this.gridOfTheGame.setBounds(0, 0, DEFAULT_WINDOW_WIDTH,
-				DEFAULT_WINDOW_HEIGHT);
+		this.gridOfTheGame.setBounds(0, 0, DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT);
 		GridLayout gl = new GridLayout(Map.NBLINE, Map.NBCOLUMN);
 		this.gridOfTheGame.setLayout(gl);
 
@@ -244,20 +211,12 @@ public class Displaying implements Runnable, ActionListener {
 		instructions += "\n\nTo create a building, you first need to select a worker and then press b\n";
 		instructions += "Then you need to clic on a near cell\n";
 		instructions += "Finally you have to choose a building : a=AntHill ; h=House ; p=PostGame";
-
-		if (selectedItem == this.itemAbout) {
-			JOptionPane.showMessageDialog(this.window, instructions, "About",
-					JOptionPane.INFORMATION_MESSAGE);
-		} else if (selectedItem == this.itemNewGame) {
-			startNewGame();
-		} else if (selectedItem == this.itemSaveGame) {
-			this.saveManager.addSave(this.game.getMap().getGrid());
-		} else if (selectedItem == this.itemLoadGame) {
-			JOptionPane.showMessageDialog(this.window,
-					this.saveManager.listSaves(), "Charger Partie",
-					JOptionPane.INFORMATION_MESSAGE);
-		} else if (selectedItem == this.itemClose) {
-			this.window.dispose();
+			
+		if (selectedItem == this.itemAbout) { JOptionPane.showMessageDialog(this.window, instructions, "About", JOptionPane.INFORMATION_MESSAGE);
+		} else if (selectedItem == this.itemNewGame) { startNewGame();
+		} else if (selectedItem == this.itemSaveGame) { this.saveManager.addSave(this.game.getMap().getGrid());
+		} else if (selectedItem == this.itemLoadGame) { JOptionPane.showMessageDialog(this.window, this.saveManager.listSaves(), "Charger Partie", JOptionPane.INFORMATION_MESSAGE);
+		} else if (selectedItem == this.itemClose) { this.window.dispose();
 		}
 	}
 	

@@ -10,39 +10,14 @@ package javaproject_ageOfAntHill.entity;
  */
 
 public class Shooter extends Unit {
-	/**
-	 * Shooter's default movement speed.
-	 */
+
 	private final static int DEFAULT_SHOOTER_SPEED = 4;
-	/**
-	 * Shooter's default attack range.
-	 */
 	private final static int DEFAULT_SHOOTER_RANGE = 5;
-	/**
-	 * Default armor
-	 */
-	//TODO
 	private static final int DEFAULT_LIGHT_UNIT_ARMOR = 0;
-
-	/**
-	 * Default damages.
-	 */
-	//TODO
 	private static final int DEFAULT_LIGHT_UNIT_DAMAGE = 0;
-
-	/**
-	 * Default health. 
-	 */
-	//TODO
 	private static final int DEFAULT_LIGHT_UNIT_HP = 0;
-	/**
-	 * Just like a serial name, it's used to identify a shooter's type.
-	 */
 	private final static String SHOOTER_TYPE = "SHOOT";
 
-	/**
-	 * That creates a Shooter with its default stats.
-	 */
 	public Shooter(int teamNumber) {
 		this.setRange(DEFAULT_SHOOTER_RANGE);
 		this.setArmor(DEFAULT_LIGHT_UNIT_ARMOR);

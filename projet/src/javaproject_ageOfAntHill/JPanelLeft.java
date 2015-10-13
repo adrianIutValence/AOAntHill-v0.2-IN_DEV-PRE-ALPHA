@@ -200,66 +200,38 @@ public class JPanelLeft extends JPanel {
 	public JLabel getImage(){
 		return overlay;
 	}
-	/**
-	 * This method allows you to set the Maximum HP and the current HP of the Entity
-	 * @param hp, maxHp
-	 */
-	public void setHp(int hp, int maxHp){
+	
+	public void setHpAndArmor(int hp, int armor, int maxHp){
 		this.hpUnitValueInt = hp;
 		this.hpMaxUnitValueInt = maxHp;
-	}
-	
-	/**
-	 * This method allows you to set Armor of the Entity
-	 * @param armor
-	 */
-	public void setArmor(int armor){
 		this.currentArmorValueInt = armor;
 	}
-	
-	/**
-	 * Add food in the JPanelLeft
-	 * @param foodValue
-	 */
+
+
 	public void addFoodValue(int foodValue){
 		this.foodValueInt += foodValue;
 		this.foodValue.setText("<html>" + this.foodValueInt + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></html>");
 	}
-	/**
-	 * Remove food in the JPanelLeft
-	 * @param foodValue
-	 */
+
 	public void removeFoodValue(int foodValue){
 		this.foodValueInt -= foodValue;
 		this.foodValue.setText("<html>" + this.foodValueInt + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></html>");
 	}
-	/**
-	 * Add dirt in the JPanelLeft
-	 * @param dirtValue
-	 */
+
 	public void addDirtValue(int dirtValue){
 		this.dirtValueInt += dirtValue;
 		this.dirtValue.setText("<html>" + this.dirtValueInt + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></html>");
 	}
-	/**
-	 * Remove dirt in the JPanelLeft
-	 * @param dirtValue
-	 */
+
 	public void removeDirtValue(int dirtValue){
 		this.dirtValueInt -= dirtValue;
 		this.dirtValue.setText("<html>" + this.dirtValueInt + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></html>");
 	}
-	/**
-	 * returns the current amount of Dirt
-	 * @return
-	 */
+
 	public int getDirtValue(){
 		return this.dirtValueInt;
 	}
-	/**
-	 * returns the current amount of food
-	 * @return
-	 */
+
 	public int getFoodValue(){
 		return this.foodValueInt;
 	}

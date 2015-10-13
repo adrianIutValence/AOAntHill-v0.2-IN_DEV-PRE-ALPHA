@@ -9,22 +9,13 @@ package javaproject_ageOfAntHill.entity;
  * @version 20150526
  */
 public abstract class Entity {
-	/**
-	 * defined the healPoints of a unity
-	 */
+
+	
 	private int healthPoints;
-	/**
-	 * defined the Maximum Health Points of a unity
-	 */
 	private int maxHealthPoints;
-	/**
-	 * defined the Team of an entity
-	 */
+
 	private int team;
-	/**
-	 * defines the Entity's type (Warrior, Fly, AntHill, ...)
-	 */
-	private String type;
+	private String unitType;
 	
 	/**
 	 * creates a new Entity corresponding to a new in-game object (unit,
@@ -39,7 +30,7 @@ public abstract class Entity {
 	}
 	
 	public String getType(){
-		return this.type;
+		return this.unitType;
 	}
 	
 	public int getTeam(){
@@ -47,7 +38,7 @@ public abstract class Entity {
 	}
 	
 	public void setType(String type){
-		this.type=type;
+		this.unitType=type;
 	}
 	
 	/**

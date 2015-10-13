@@ -14,20 +14,9 @@ import javaproject_ageOfAntHill.entity.Unit;
  */
 public class Cell {
 
-	/**
-	 * if there is an Entity on this cell
-	 */
+
 	private Entity entity;
-
-	/**
-	 * cell's state (the state can be grass, sand or water).
-	 * 
-	 */
 	protected CellState cellState;
-
-	/**
-	 * if a ressource is on the cell
-	 */
 	private Ressource ressource;
 	
 	/**

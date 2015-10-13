@@ -241,8 +241,7 @@ public class Interface implements InterfaceHM, MouseListener, ActionListener, Ke
 				// displays the unit's hp in case only one unit was selected
 			if (this.units.size()==1){
 				wind.getDisp().getJpanelLeft().selectionEntity(this.units.get(0));
-				wind.getDisp().getJpanelLeft().setHp(this.units.get(0).getHealthPoints(), this.units.get(0).getMaxHealthPoints());
-				wind.getDisp().getJpanelLeft().setArmor(this.units.get(0).getArmor());
+				wind.getDisp().getJpanelLeft().setHpAndArmor(this.units.get(0).getHealthPoints(),this.units.get(0).getArmor(), this.units.get(0).getMaxHealthPoints());
 			}
 			else
 				wind.getDisp().getJpanelLeft().selectionEntity(this.units.get(0).getTeam());
@@ -260,8 +259,7 @@ public class Interface implements InterfaceHM, MouseListener, ActionListener, Ke
 				break;
 			default:
 			}
-			wind.getDisp().getJpanelLeft().setHp(this.building.getHealthPoints(), this.building.getMaxHealthPoints());
-			wind.getDisp().getJpanelLeft().setArmor(0); // buildings have no armor
+			wind.getDisp().getJpanelLeft().setHpAndArmor(this.building.getHealthPoints(),this.building.armor = 0, this.building.getMaxHealthPoints());
 		}
 	}
 	
@@ -319,8 +317,7 @@ public class Interface implements InterfaceHM, MouseListener, ActionListener, Ke
 			default:
 			}
 		}
-		wind.getDisp().getJpanelLeft().setHp(0, 0);
-		wind.getDisp().getJpanelLeft().setArmor(0);
+		wind.getDisp().getJpanelLeft().setHpAndArmor(0, 0, 0);
 	}
 	
 	/**

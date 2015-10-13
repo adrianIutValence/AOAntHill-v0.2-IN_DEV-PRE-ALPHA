@@ -9,30 +9,11 @@ package javaproject_ageOfAntHill.entity;
  */
 
 public class Guardian extends Unit {
-	/**
-	 * Default speed
-	 */
+
 	private final static int DEFAULT_GUARDIAN_SPEED = 2;
-
-	/**
-	 * Default armor
-	 */
-	//TODO
 	private static final int DEFAULT_HEAVY_UNIT_ARMOR = 0;
-	/**
-	 * Default damages.
-	 */
-	//TODO
 	private static final int DEFAULT_HEAVY_UNIT_DAMAGE = 0;
-
-	/**
-	 * Default health. 
-	 */
-	//TODO
 	private static final int DEFAULT_HEAVY_UNIT_HP = 0;
-	/**
-	 * Just like a serial name, it's used to identify a guardian's type.
-	 */
 	private final static String GUARDIAN_TYPE = "GUARD";
 
 	/**

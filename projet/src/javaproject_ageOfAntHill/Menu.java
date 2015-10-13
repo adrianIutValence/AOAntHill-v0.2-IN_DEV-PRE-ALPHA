@@ -24,29 +24,12 @@ import javax.swing.JSplitPane;
  */
 @SuppressWarnings("serial")
 public class Menu extends JFrame implements ActionListener {
-	/**
-	 * used to start a new game
-	 */
+	
 	private JButton buttonNewGame;
-	/**
-	 * used to load a game
-	 */
 	private JButton buttonLoadGame;
-	/**
-	 * closes the game
-	 */
 	private JButton buttonClose;
-	/**
-	 * window of the game
-	 */
 	private Displaying disp;
-	/**
-	 * contains the button "New game" and the button "load game"
-	 */
 	private JSplitPane split1;
-	/**
-	 * contains the JsplitPane split1 and the button "close"
-	 */
 	private JSplitPane split2;
 	
 	/**
@@ -55,13 +38,18 @@ public class Menu extends JFrame implements ActionListener {
 	 * @param disp
 	 */
 	public Menu(Displaying disp){
+		
 		this.disp = disp;
+		
 		buttonNewGame = new JButton("", new ImageIcon("./img/overlay/BUTTON-NEWGAME.png"));
 		buttonNewGame.setBorder(null);
+		
 		buttonLoadGame = new JButton("",  new ImageIcon("./img/overlay/BUTTON-LOADGAME.png"));
 		buttonLoadGame.setBorder(null);
+		
 		buttonClose = new JButton("",  new ImageIcon("./img/overlay/BUTTON-CLOSE.png"));
 		buttonClose.setBorder(null);
+		
 		this.split1 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 		this.split2 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);
 		
@@ -97,11 +85,13 @@ public class Menu extends JFrame implements ActionListener {
 	 */
 	split1.add(pan1);
 	split1.add(pan2);
-	split2.add(split1);
 	split2.add(pan3);
+	split2.add(split1);
+	
 	split1.setDividerLocation(150);
 	split1.setDividerSize(0);
 	split1.setEnabled(true);
+	
 	split2.setDividerLocation(300);
 	split2.setDividerSize(0);
 	split2.setEnabled(true);
@@ -128,10 +118,12 @@ public class Menu extends JFrame implements ActionListener {
 	if(e.getSource() == buttonClose){
 		this.disp.getFrame().dispose();
 		this.dispose();	
+		
 	} else if(e.getSource() == buttonNewGame){
 		this.disp.getFrame().setVisible(true);
 		this.disp.startNewGame();
 		this.dispose();
+		
 	} else if (e.getSource() == buttonLoadGame){
 		
 		this.dispose();

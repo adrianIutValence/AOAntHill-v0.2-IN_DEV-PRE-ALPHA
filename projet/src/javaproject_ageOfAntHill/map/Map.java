@@ -18,33 +18,15 @@ import javaproject_ageOfAntHill.entity.Worker;
  * @version 20150607
  */
 public class Map implements InterfaceMap {
-	/**
-	 * A constant integer which contain the total number of lines in the grid of the game
-	 */
+	
 	public final static int NBLINE = 48;
-	/**
-	 * A constant integer which contain the total number of columns in the grid of the game
-	 */
 	public final static int NBCOLUMN = 48;
-	/**
-	 * number of water lakes in the map
-	 */
+	
 	private final static int MAX_WATER_LAKE = 8;
-	/**
-	 * number of tree forests in the map
-	 */
 	private final static int MAX_TREE_FOREST = 4;
-	/**
-	 * initial number of flies (enemy unit)
-	 */
+	
 	private final static int MAX_FLIES_NUMBER = 15;
-	/**
-	 * initial number of snakes (enemy unit)
-	 */
 	private final static int MAX_SNAKES_NUMBER = 15;
-	/**
-	 * initial number of scarabs (enemy unit)
-	 */
 	private final static int MAX_SCARABS_NUMBER = 15;
 
 	/**

@@ -10,14 +10,9 @@ import javaproject_ageOfAntHill.entity.Entity;
  * @version 20150906
  */
 public class Buildable extends Entity {
-	/**
-	 * allow the player to know the next upgrade level for his building
-	 */
+	
 	private int nextUpgrade;
 
-	/**
-	 * This method allows you to upgrade your entity (Unity or Building)
-	 */
 	public void upgrade(Entity targetToUp) {
 
 	}

@@ -16,61 +16,30 @@ import javaproject_ageOfAntHill.map.Position;
  */
 
 public abstract class Unit extends Entity {
-	// eventuellement creer une nouvelle classe (abstraite ?) pour stocker
-	// toutes ces constantes
-	/**
-	 * default range for all units (except Shooter)
-	 */
+
 	protected final static int DEFAULT_UNIT_RANGE = 1;
-	/**
-	 * default armor, damages and HP for non-attacking units (queen, workers...)
-	 */
+
 	protected final static int DEFAULT_PEACEFUL_UNIT_ARMOR = 1;
 	protected final static int DEFAULT_PEACEFUL_UNIT_DAMAGE = 0;
 	protected final static int DEFAULT_PEACEFUL_UNIT_HP = 20;
-	/**
-	 * default armor, damages and HP for non-attacking units (scouts,
-	 * shooters,flies...)
-	 */
+
 	protected final static int DEFAULT_LIGHT_UNIT_ARMOR = 2;
 	protected final static int DEFAULT_LIGHT_UNIT_DAMAGE = 6;
 	protected final static int DEFAULT_LIGHT_UNIT_HP = 24;
-	/**
-	 * default armor, damages and HP for medium armor units (warriors,
-	 * lizards...)
-	 */
+
 	protected final static int DEFAULT_MEDIUM_UNIT_ARMOR = 3;
 	protected final static int DEFAULT_MEDIUM_UNIT_DAMAGE = 10;
 	protected final static int DEFAULT_MEDIUM_UNIT_HP = 32;
-	/**
-	 * default armor, damages and HP for heavy armor units (guardians,
-	 * scarab...)
-	 */
+
 	protected final static int DEFAULT_HEAVY_UNIT_ARMOR = 5;
 	protected final static int DEFAULT_HEAVY_UNIT_DAMAGE = 7;
 	protected final static int DEFAULT_HEAVY_UNIT_HP = 30;
 
-	/**
-	 * The units armor : It reduce the damages taken.
-	 */
 	private int armor;
-	/**
-	 * The damages amount that the unit can inflict.
-	 */
 	private int damages;
-	/**
-	 * The unit movement range
-	 */
 	private int deplacements;
-
-	/**
-	 * The attack range
-	 */
 	private int range;
 
-	/**
-	 * new unit
-	 */
 	public Unit() {
 	}
 
@@ -98,59 +67,34 @@ public abstract class Unit extends Entity {
 		return false;
 	}
 	
-	/**
-	 * returns the attack damages of this unit
-	 * @return
-	 */
 	public int getDamages() {
 		return damages;
 	}
-	/**
-	 * sets the attack damages of this unit
-	 * @param damages
-	 */
+
 	public void setDamages(int damages) {
 		this.damages = damages;
 	}
-	/**
-	 * returns the armor of this unit
-	 * @return
-	 */
+
 	public int getArmor() {
 		return armor;
 	}
-	/**
-	 * sets the armor of this unit
-	 * @param armor
-	 */
+
 	public void setArmor(int armor) {
 		this.armor = armor;
 	}
-	/**
-	 * returns the movement speed of this unit
-	 * @return
-	 */
+
 	public int getDeplacements() {
 		return deplacements;
 	}
-	/**
-	 * sets the movement speed of this unit
-	 * @param deplacements
-	 */
+
 	public void setDeplacements(int deplacements) {
 		this.deplacements = deplacements;
 	}
-	/**
-	 * returns the range of this unit
-	 * @return
-	 */
+
 	public int getRange() {
 		return range;
 	}
-	/**
-	 * sets the range of this unit
-	 * @param range
-	 */
+
 	public void setRange(int range) {
 		this.range = range;
 	}

@@ -10,18 +10,10 @@ package javaproject_ageOfAntHill.entity;
  */
 
 public class Warrior extends Unit {
-	/**
-	 * Warrior's moving speed.
-	 */
+
 	private final static int DEFAULT_WARRIOR_SPEED = 3;
-	/**
-	 * Just like a serial name, it's used to identify a warrior's type.
-	 */
 	private final static String WARRIOR_TYPE = "WARR";
 
-	/**
-	 * That creates a warrior with all its default stats.
-	 */
 	public Warrior(int teamNumber) {
 		this.setRange(DEFAULT_UNIT_RANGE);
 		this.setArmor(DEFAULT_MEDIUM_UNIT_ARMOR);

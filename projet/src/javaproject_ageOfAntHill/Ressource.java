@@ -5,23 +5,11 @@ import javaproject_ageOfAntHill.map.InterfaceMap;
 import javaproject_ageOfAntHill.map.Position;
 
 public class Ressource {
-	/**
-	 * initial amount of food on a cell : 0
-	 */
-	private final static int DEFAULT_FOOD = 0;
-	/**
-	 * initial amount of dirt : 150
-	 */
-	private final static int DEFAULT_DIRT=150;
-	/**
-	 * quantity of this ressource (dirt is used to create new buildings)
-	 */
-	private int dirtQuantity;
-	/**
-	 * quantity of this ressource (food is used to create new units)
-	 */
-	private int foodQuantity;
 	
+	private final static int DEFAULT_FOOD = 0;
+	private final static int DEFAULT_DIRT=150;
+	private int dirtQuantity;
+	private int foodQuantity;
 	
 	/**
 	 * creates the ressources in a cell with the (default) initial amounts

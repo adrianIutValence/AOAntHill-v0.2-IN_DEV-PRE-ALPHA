@@ -12,39 +12,14 @@ package javaproject_ageOfAntHill.map;
  */
 
 public enum CellState {
-	/**
-	 * This define the Yellow color of the cellState
-	 */
+	
 	SAND_SQUARE("S", "SAND_SQUARE.png"),
-
-	/**
-	 * This define the Green color of the cellState
-	 */
 	GRASS_SQUARE("G", "GRASS_SQUARE.png"),
-
-	/**
-	 * This define the Blue color of the cellState
-	 */
 	WATER_SQUARE("W", "WATER_SQUARE.png"),
-
-	/**
-	 * This define the Tree Specification of the cellState
-	 */
 	TREE_SQUARE("T", "TREE_SQUARE.png");
 	
-	
-
-	/**
-	 * Name of the file (picture)
-	 */
 	private String fileName;
-	/**
-	 * state of the cell (the state can be water, grass or sand)
-	 */
 	private String state;
-	/**
-	 * true if the state is water.
-	 */
 	private boolean unreachable;
 
 	/**
