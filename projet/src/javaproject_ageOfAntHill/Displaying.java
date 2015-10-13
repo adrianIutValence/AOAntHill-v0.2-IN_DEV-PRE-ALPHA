@@ -149,10 +149,7 @@ public class Displaying implements Runnable, ActionListener {
 		menu.add(this.itemAbout);
 		menu.add(this.itemClose);
 
-		// add action listener
-		this.itemAbout.addActionListener(this);
-		this.itemClose.addActionListener(this);
-		this.menuBar.add(menu);
+		initListener(menu);
 
 		// creation of the game Menu
 		JMenu game = new JMenu("Game");
@@ -172,6 +169,13 @@ public class Displaying implements Runnable, ActionListener {
 
 		// add a menu option
 		this.menuBar.add(game);
+	}
+
+	private void initListener(JMenu menu) {
+		// add action listener
+		this.itemAbout.addActionListener(this);
+		this.itemClose.addActionListener(this);
+		this.menuBar.add(menu);
 	}
 
 	private void initWindow() {
